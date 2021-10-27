@@ -1,20 +1,16 @@
 # Bookmark-landing-page
 
-- Created with Html Css(Sass) Javascript using *vite*🔥
+- Created with Html Sass Javascript using *vite*🔥
 
 - Fully responsive and animated
 
-# What is different
+- Additional stuff (hovers, animations, effects, etc...)
 
 - Everything is hidden until scrolled near it
 
-- Navigation bar that appears only when scrolling up + mobile menu
+- Navigation bar that appears only when needed + mobile menu
 
-- Sliders that animated and smooth
-
-- Faq
-
-- Sign-up form that validate your email with animations
+- Sign-up form that validate your email
 
 # Live
 
@@ -23,4 +19,5 @@
 # Credit
 
 - Inspired by Frontend mentor
+
 - Website: https://www.frontendmentor.io
