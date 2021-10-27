@@ -1,0 +1,62 @@
+@use '../abstracts' as *;
+@use '../core' as *;
+// Footer
+
+#footer {
+  @include flex;
+  background: $dark__blue;
+  width: 100%;
+  padding: 2.25rem var(--page-padding);
+
+  @include media($mobile__break) {
+    @include flex(column);
+  }
+  .left__side {
+    @include flex;
+
+    @include media($mobile__break) {
+      @include flex(column);
+    }
+    .footer__logo {
+      margin-right: $spacing_lg;
+      @include media($mobile__break) {
+        margin-right: 0;
+        margin-bottom: $spacing_md;
+      }
+    }
+    .links {
+      @include flex;
+      @include media($mobile__break) {
+        @include flex(column);
+      }
+      li {
+        cursor: pointer;
+        color: $white;
+        text-transform: uppercase;
+        margin-right: $spacing_md;
+        @include media($mobile__break) {
+          margin-right: 0;
+          margin-bottom: $spacing_md;
+        }
+        &:hover {
+          color: $soft__red;
+        }
+      }
+    }
+  }
+  .social {
+    @include flex;
+    i {
+      color: $white;
+      margin-right: $spacing_md;
+      cursor: pointer;
+      @include media($mobile__break) {
+        margin-right: $spacing_sm;
+        margin-left: $spacing_sm;
+      }
+      &:hover {
+        color: $soft__red;
+      }
+    }
+  }
+}

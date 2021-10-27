@@ -1,0 +1,110 @@
+@use '../abstracts' as *;
+@use '../core' as *;
+// Sign-up
+
+#sign-up {
+  margin-top: $section_break;
+  text-align: center;
+  background: $soft__blue;
+  color: $white;
+  padding: $spacing_lg 0;
+  & > small {
+    letter-spacing: 0.425rem;
+  }
+  h1 {
+    margin: $spacing_md 0;
+  }
+
+  .input__container {
+    @include flex;
+    width: max-content;
+    margin: 0 auto;
+    $radius: $radius * 1.5;
+    @include media($mobile__break) {
+      @include flex(column);
+      width: 85%;
+    }
+    .input {
+      @include flex;
+      width: 18rem;
+      height: 2.675rem;
+      background: white;
+      padding: 0 $spacing_sm;
+      position: relative;
+      border-radius: $radius;
+      border: 2px solid transparent;
+      @include media($mobile__break) {
+        width: 100%;
+      }
+      .email__input {
+        flex-basis: 80%;
+        outline: 0;
+        padding: 0.5rem;
+        font-size: 0.925rem;
+        &::placeholder {
+          color: black;
+          font-weight: bold;
+          font-size: 0.8rem;
+        }
+      }
+      .error__icon {
+        opacity: 0;
+        transform: translateX(50%);
+      }
+
+      .error__message {
+        box-sizing: border-box;
+        border-radius: 0 0 $radius $radius;
+        font-size: 0.7rem;
+        height: 1.75rem;
+        text-align: left;
+        padding: 0.45rem 0.5rem;
+        background: $soft__red;
+        position: absolute;
+        bottom: -70%;
+        left: -2px;
+        right: -2px;
+        opacity: 0;
+        font-style: italic;
+        transform: translateY(50%);
+      }
+    }
+    .submit__email {
+      @include btn_reset;
+      margin-left: $spacing_md;
+      width: 7rem;
+      height: 2.675rem;
+      border: 2px solid transparent;
+      border-radius: $radius;
+      background: $soft__red;
+      color: $white;
+      padding: 0 0.75rem;
+      @include media($mobile__break) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: $spacing_md;
+      }
+      &:hover {
+        border-color: $soft__red;
+        background: $white;
+        color: $soft__red;
+      }
+    }
+  }
+  .input__container.error__occurred {
+    .input,
+    .submit__email {
+      border-color: $soft__red;
+    }
+    .error__message,
+    .error__icon {
+      opacity: 1;
+    }
+    .error__message {
+      transform: translateY(0);
+    }
+    .error__icon {
+      transform: translateX(0);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use './variables' as *;
+// Mixins
+
+// flex
+@mixin flex($dir: row, $just: space-between, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+}
+// gap
+@mixin gap($gap) {
+  gap: $gap + rem;
+}
+// button reset
+@mixin btn_reset {
+  outline: none;
+  cursor: pointer;
+}
+// media query
+@mixin media($max__width) {
+  @media (max-width: $max__width + px) {
+    @content;
+  }
+}
+// page padding
+@mixin custom__padding() {
+  @include media($desktop__break-1) {
+    --page-padding: 10rem;
+  }
+  @include media($desktop__break-2) {
+    --page-padding: 5rem;
+  }
+  @include media($desktop__break-3) {
+    --page-padding: 2.5rem;
+  }
+  @include media($mobile__break-2) {
+    --page-padding: 0.5rem;
+  }
+}

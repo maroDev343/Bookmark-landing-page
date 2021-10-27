@@ -1,0 +1,9 @@
+// Link all the layout/files
+// @use './layout';
+@use './layout/extension';
+@use './layout/faq';
+@use './layout/features';
+@use './layout/footer';
+@use './layout/hero';
+@use './layout/navigations';
+@use './layout/sign_up';

@@ -1,0 +1,105 @@
+@use '../abstracts' as *;
+@use '../core' as *;
+// FAQ
+
+#faq {
+  @include flex(column, center);
+  margin-top: $section_break;
+  text-align: center;
+  padding: 0 1rem;
+  .description {
+    max-width: 55%;
+    padding-bottom: $spacing_sm;
+    @include media($mobile__break) {
+      max-width: 100%;
+    }
+    h2 {
+      color: $dark__blue;
+    }
+    p {
+      color: $gray;
+      margin: $spacing_md auto;
+      max-width: 70%;
+    }
+  }
+
+  .faq__container {
+    margin-top: $spacing_sm;
+    max-width: 45%;
+    text-align: left;
+    @include media($mobile__break) {
+      max-width: 85%;
+    }
+
+    .question__container {
+      height: 4rem;
+      overflow: hidden;
+      border-bottom: 1px solid lighten($gray, 25%);
+      margin: 0.5rem 0;
+      padding-bottom: 1.5rem;
+      @include media($mobile__break) {
+        padding-bottom: 2.5rem;
+      }
+      &:nth-of-type(1) {
+        border-top: 1px solid lighten($gray, 25%);
+      }
+      &:nth-of-type(2) {
+        @include media($fix-faq) {
+          padding-bottom: 3.5rem;
+        }
+      }
+      .question {
+        cursor: pointer;
+        @include flex;
+        margin: $spacing_sm 0;
+        color: $dark__blue;
+
+        i {
+          color: $soft__blue;
+        }
+        &:hover {
+          color: $soft__red;
+        }
+      }
+      .answer {
+        color: $gray;
+        margin-top: 0.5rem;
+        transition: all 0.2s 0.1s ease-in;
+        opacity: 0;
+      }
+    }
+    .question__container.active {
+      height: 12rem;
+      @include media($desktop__break-4) {
+        height: 15rem;
+      }
+      .question {
+        i {
+          transform: rotate(180deg);
+          color: $soft__red;
+        }
+        &:hover {
+          color: currentColor;
+        }
+      }
+      .answer {
+        opacity: 1;
+      }
+    }
+  }
+  button {
+    @include btn_reset;
+    margin-top: $spacing_md + $spacing_sm;
+    width: 7rem;
+    height: 2.75rem;
+    border-radius: $radius;
+    border: 2px solid transparent;
+    background: $soft__blue;
+    color: $white;
+    &:hover {
+      border-color: $soft__blue;
+      background: $white;
+      color: $soft__blue;
+    }
+  }
+}
