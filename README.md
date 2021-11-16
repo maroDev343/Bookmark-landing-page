@@ -14,7 +14,7 @@
 
 # Live
 
-- https://marodev343-bookmark-landing-page.pages.dev/
+- https://marodevv-bookmark-landing-page.pages.dev/
 
 # Credit
 
