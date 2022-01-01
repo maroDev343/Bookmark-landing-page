@@ -1,14 +1,15 @@
-@use '../abstracts' as *;
 // Typography
+@use '../abstracts' as *;
 
+// # Basics
 html {
   font-size: $font__size;
 }
-* {
+body {
   font-family: $font__family;
 }
 
-// headings
+// # Headings | paragraphs | etc..
 h1 {
   font-size: 3rem;
   font-weight: 501;
@@ -29,8 +30,6 @@ p {
   letter-spacing: 0.0525rem;
   line-height: 1.425rem;
 }
-
-// others
 li {
   font-size: 0.775rem;
   font-weight: 500;
@@ -47,6 +46,8 @@ button {
     font-size: 0.815rem;
   }
 }
+
+// # Icons
 i {
   font-size: 1.15rem;
 }

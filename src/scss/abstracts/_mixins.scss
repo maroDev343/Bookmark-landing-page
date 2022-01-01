@@ -1,5 +1,5 @@
-@use './variables' as *;
 // Mixins
+@use './variables' as *;
 
 // flex
 @mixin flex($dir: row, $just: space-between, $align: center) {

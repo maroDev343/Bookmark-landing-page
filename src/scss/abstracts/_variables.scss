@@ -11,13 +11,6 @@ $white: rgb(255, 255, 255);
 $font__size: 18px;
 $font__family: 'Rubik', sans-serif; // 400, 500
 
-// # Transitions
-$duration: 0.255s;
-$duration_lg: 0.875s;
-$snap_timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-$jiggle_timing-function: cubic-bezier(0.78, -0.4, 0.01, 1.67);
-$cubic_timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-
 // # Others
 $radius: 0.25rem;
 $radius_lg: 0.75rem;
@@ -26,6 +19,14 @@ $spacing_md: 1.75rem;
 $spacing_sm: 0.875rem;
 $fixed__width: 1200px;
 $section_break: 10rem;
+
+// # Transitions
+$duration: 0.255s;
+$duration_lg: 0.875s;
+$transition: all $duration;
+$snap_timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+$jiggle_timing-function: cubic-bezier(0.78, -0.4, 0.01, 1.67);
+$cubic_timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
 
 // # Breakpoints
 $desktop__break-1: 1600;
@@ -39,7 +40,8 @@ $mobile__break-2: 420;
 $mobile__break-3: 320;
 $fix-faq: 396;
 
-// # Custom prop
+// # Custom Props
 :root {
+  // # Others
   --page-padding: 15rem;
 }
