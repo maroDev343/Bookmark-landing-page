@@ -77,12 +77,8 @@
       border-radius: $radius;
       background: $soft__red;
       color: $white;
-<<<<<<< HEAD
-      @include media($mobile-br-1) {
-=======
       padding: 0 0.75rem;
       @include media($mobile__break) {
->>>>>>> parent of 9700c8b (updated vite)
         width: 100%;
         margin-left: 0;
         margin-top: $spacing_md;

@@ -1,153 +1,153 @@
-@use '../abstracts' as *;
-// Animations
+// @use '../abstracts' as *;
+// // Animations
 
-// Adding transitions
-section#hero > * {
-  transition: all $duration_lg $snap_timing-function;
-}
-section#features > * {
-  transition: all $duration_lg $snap_timing-function;
-}
-section#extensions .browser,
-section#extensions .description {
-  transition: all $duration_lg $cubic_timing-function;
-}
-section#faq > * {
-  transition: all $duration_lg $snap_timing-function;
-}
-section#sign-up {
-  transition: all $duration_lg $snap_timing-function;
-}
-section#footer {
-  transition: all $duration_lg $snap_timing-function;
-}
+// // Adding transitions
+// section#hero > * {
+//   transition: all $duration_lg $snap_timing-function;
+// }
+// section#features > * {
+//   transition: all $duration_lg $snap_timing-function;
+// }
+// section#extensions .browser,
+// section#extensions .description {
+//   transition: all $duration_lg $cubic_timing-function;
+// }
+// section#faq > * {
+//   transition: all $duration_lg $snap_timing-function;
+// }
+// section#sign-up {
+//   transition: all $duration_lg $snap_timing-function;
+// }
+// section#footer {
+//   transition: all $duration_lg $snap_timing-function;
+// }
 
-// Animating on class 'hidden'
-section#hero {
-  .content {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  .illustration {
-    opacity: 1;
-  }
-}
-section#hero.hidden {
-  .content {
-    transform: translateX(-500px);
-    opacity: 0;
-  }
-  .illustration {
-    opacity: 0;
-  }
-}
-section#features {
-  .description {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .sliders {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .features__container {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-section#features.hidden {
-  .description {
-    transform: translateY(350px);
-    opacity: 0;
-  }
-  .sliders {
-    transform: translateY(350px);
-    opacity: 0;
-  }
-  .features__container {
-    transform: translateY(-350px);
-    opacity: 0;
-  }
-}
-section#extensions {
-  .description {
-    opacity: 1;
-    transform: skewY(0deg);
-  }
-  .browsers {
-    .browser {
-      opacity: 1;
-      &:nth-of-type(1) {
-        transform: translateX(0);
-      }
-      &:nth-of-type(2) {
-        transform: translateY(0);
-      }
-      &:nth-of-type(3) {
-        transform: translateX(0);
-      }
-    }
-  }
-}
-section#extensions.hidden {
-  .description {
-    opacity: 0;
-    transform: skewY(12.5deg);
-  }
-  .browsers {
-    .browser {
-      opacity: 0;
-      &:nth-of-type(1) {
-        transform: translateX(-350px);
-      }
-      &:nth-of-type(2) {
-        transform: translateY(350px);
-      }
-      &:nth-of-type(3) {
-        transform: translateX(350px);
-      }
-    }
-  }
-}
-section#faq {
-  .description {
-    transform: skewX(0deg);
-    opacity: 1;
-  }
-  .faq__container {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  button {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-section#faq.hidden {
-  .description {
-    transform: skewX(12.5deg);
-    opacity: 0;
-  }
-  .faq__container {
-    transform: translateX(-350px);
-    opacity: 0;
-  }
-  button {
-    transform: translateY(150px);
-    opacity: 0;
-  }
-}
-section#sign-up {
-  transform: skewX(0deg);
-}
-section#sign-up.hidden {
-  transform: skewX(12.5deg);
-}
-section#footer {
-  opacity: 1;
-  transform: translateY(0);
-}
-section#footer.hidden {
-  opacity: 0;
-  transform: translateY(250px);
-}
+// // Animating on class 'hidden'
+// section#hero {
+//   .content {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+//   .illustration {
+//     opacity: 1;
+//   }
+// }
+// section#hero.hidden {
+//   .content {
+//     transform: translateX(-500px);
+//     opacity: 0;
+//   }
+//   .illustration {
+//     opacity: 0;
+//   }
+// }
+// section#features {
+//   .description {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+//   .sliders {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+//   .features__container {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+// section#features.hidden {
+//   .description {
+//     transform: translateY(350px);
+//     opacity: 0;
+//   }
+//   .sliders {
+//     transform: translateY(350px);
+//     opacity: 0;
+//   }
+//   .features__container {
+//     transform: translateY(-350px);
+//     opacity: 0;
+//   }
+// }
+// section#extensions {
+//   .description {
+//     opacity: 1;
+//     transform: skewY(0deg);
+//   }
+//   .browsers {
+//     .browser {
+//       opacity: 1;
+//       &:nth-of-type(1) {
+//         transform: translateX(0);
+//       }
+//       &:nth-of-type(2) {
+//         transform: translateY(0);
+//       }
+//       &:nth-of-type(3) {
+//         transform: translateX(0);
+//       }
+//     }
+//   }
+// }
+// section#extensions.hidden {
+//   .description {
+//     opacity: 0;
+//     transform: skewY(12.5deg);
+//   }
+//   .browsers {
+//     .browser {
+//       opacity: 0;
+//       &:nth-of-type(1) {
+//         transform: translateX(-350px);
+//       }
+//       &:nth-of-type(2) {
+//         transform: translateY(350px);
+//       }
+//       &:nth-of-type(3) {
+//         transform: translateX(350px);
+//       }
+//     }
+//   }
+// }
+// section#faq {
+//   .description {
+//     transform: skewX(0deg);
+//     opacity: 1;
+//   }
+//   .faq__container {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+//   button {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+// section#faq.hidden {
+//   .description {
+//     transform: skewX(12.5deg);
+//     opacity: 0;
+//   }
+//   .faq__container {
+//     transform: translateX(-350px);
+//     opacity: 0;
+//   }
+//   button {
+//     transform: translateY(150px);
+//     opacity: 0;
+//   }
+// }
+// section#sign-up {
+//   transform: skewX(0deg);
+// }
+// section#sign-up.hidden {
+//   transform: skewX(12.5deg);
+// }
+// section#footer {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
+// section#footer.hidden {
+//   opacity: 0;
+//   transform: translateY(250px);
+// }
