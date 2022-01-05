@@ -29,6 +29,12 @@ const animationIn = () => {
     image.style.opacity = 1;
     content.style.transform = 'translateX(0%)';
     content.style.opacity = 1;
+    //! Glitched on smaller screen sizes (overflowing of x axis of html after translating on x axis)
+    document.documentElement.style.width = '99%';
+    setTimeout(() => {
+      document.documentElement.style.width = '100%';
+    }, 250);
+    //!
   }, 250);
 };
 const displayInfo = slider => {

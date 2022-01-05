@@ -21,9 +21,16 @@ const checkSlide = () => {
     if (isHalfShown && isNotScrolledPast) {
       animation.classList.remove('hidden');
     }
+    //! Glitched on smaller screen sizes (overflowing of x axis of html after translating on x axis)
+    if (animation.id == 'sign-up' && !animation.classList.contains('hidden')) {
+      document.documentElement.style.width = '99%';
+      setTimeout(() => {
+        document.documentElement.style.width = '100%';
+      }, 250);
+    }
+    //!
   });
 };
-
 // EventListeners
 window.addEventListener('scroll', checkSlide);
 

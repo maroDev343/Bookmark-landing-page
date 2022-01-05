@@ -137,10 +137,10 @@ section#faq.hidden {
   }
 }
 section#sign-up {
-  transform: skewX(0deg);
+  transform: skewY(0);
 }
 section#sign-up.hidden {
-  transform: skewX(12.5deg);
+  transform: skewY(12.5deg);
 }
 section#footer {
   opacity: 1;

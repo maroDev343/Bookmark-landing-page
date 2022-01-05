@@ -78,12 +78,7 @@
       border-radius: $radius;
       background: $soft__red;
       color: $white;
-<<<<<<< HEAD
-      padding: 0 0.75rem;
-      @include media($mobile__break) {
-=======
       @include media($mobile-br-1) {
->>>>>>> parent of 8ae6f63 (reverted)
         width: 100%;
         margin-left: 0;
         margin-top: $med__spacing;
