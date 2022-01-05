@@ -3,41 +3,40 @@
 // Sign-up
 
 #sign-up {
-  margin-top: $section__break;
+  margin-top: $section_break;
   text-align: center;
   background: $soft__blue;
   color: $white;
-  padding: $lrg__spacing 0;
+  padding: $spacing_lg 0;
   & > small {
     letter-spacing: 0.425rem;
   }
   h1 {
-    margin: $med__spacing 0;
+    margin: $spacing_md 0;
   }
 
   .input__container {
-    @include flex-row(space-between, center);
+    @include flex;
     width: max-content;
     margin: 0 auto;
     $radius: $radius * 1.5;
-    @include media($mobile-br-1) {
-      @include flex-col(space-between, center);
+    @include media($mobile__break) {
+      @include flex(column);
       width: 85%;
     }
     .input {
-      @include flex-row(space-between, center);
+      @include flex;
       width: 18rem;
       height: 2.675rem;
       background: white;
-      padding: 0 $sml__spacing;
+      padding: 0 $spacing_sm;
       position: relative;
       border-radius: $radius;
       border: 2px solid transparent;
-      @include media($mobile-br-1) {
+      @include media($mobile__break) {
         width: 100%;
       }
       .email__input {
-        @include input-reset;
         flex-basis: 80%;
         padding: 0.5rem;
         font-size: 0.925rem;
@@ -70,18 +69,23 @@
       }
     }
     .submit__email {
-      @include btn-reset;
-      margin-left: $med__spacing;
+      @include btn_reset;
+      margin-left: $spacing_md;
       width: 7rem;
       height: 2.675rem;
       border: 2px solid transparent;
       border-radius: $radius;
       background: $soft__red;
       color: $white;
+<<<<<<< HEAD
       @include media($mobile-br-1) {
+=======
+      padding: 0 0.75rem;
+      @include media($mobile__break) {
+>>>>>>> parent of 9700c8b (updated vite)
         width: 100%;
         margin-left: 0;
-        margin-top: $med__spacing;
+        margin-top: $spacing_md;
       }
       &:hover {
         border-color: $soft__red;

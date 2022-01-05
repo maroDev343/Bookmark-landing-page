@@ -3,14 +3,14 @@
 // FAQ
 
 #faq {
-  @include flex-col(center, center);
-  margin-top: $section__break;
+  @include flex(column, center);
+  margin-top: $section_break;
   text-align: center;
   padding: 0 1rem;
   .description {
     max-width: 55%;
-    padding-bottom: $sml__spacing;
-    @include media($mobile-br-1) {
+    padding-bottom: $spacing_sm;
+    @include media($mobile__break) {
       max-width: 100%;
     }
     h2 {
@@ -18,16 +18,16 @@
     }
     p {
       color: $gray;
-      margin: $med__spacing auto;
+      margin: $spacing_md auto;
       max-width: 70%;
     }
   }
 
   .faq__container {
-    margin-top: $sml__spacing;
+    margin-top: $spacing_sm;
     max-width: 45%;
     text-align: left;
-    @include media($mobile-br-1) {
+    @include media($mobile__break) {
       max-width: 85%;
     }
 
@@ -37,22 +37,23 @@
       border-bottom: 1px solid lighten($gray, 25%);
       margin: 0.5rem 0;
       padding-bottom: 1.5rem;
-      @include media($mobile-br-1) {
+      @include media($mobile__break) {
         padding-bottom: 2.5rem;
       }
       &:nth-of-type(1) {
         border-top: 1px solid lighten($gray, 25%);
       }
       &:nth-of-type(2) {
-        @include media($mobile-br-fix) {
+        @include media($fix-faq) {
           padding-bottom: 3.5rem;
         }
       }
       .question {
         cursor: pointer;
-        @include flex-row(space-between, center);
-        margin: $sml__spacing 0;
+        @include flex;
+        margin: $spacing_sm 0;
         color: $dark__blue;
+
         i {
           color: $soft__blue;
         }
@@ -63,18 +64,22 @@
       .answer {
         color: $gray;
         margin-top: 0.5rem;
-        transition: all $dur-s $delay;
+        transition: all 0.2s 0.1s ease-in;
         opacity: 0;
       }
     }
     .question__container.active {
       height: 12rem;
-      @include media($desktop-br-4) {
+      @include media($desktop__break-4) {
         height: 15rem;
       }
       .question {
         i {
           transform: rotate(180deg);
+          color: $soft__red;
+        }
+        &:hover {
+          color: currentColor;
         }
       }
       .answer {
@@ -83,8 +88,8 @@
     }
   }
   button {
-    @include btn-reset;
-    margin-top: $med__spacing + $sml__spacing;
+    @include btn_reset;
+    margin-top: $spacing_md + $spacing_sm;
     width: 7rem;
     height: 2.75rem;
     border-radius: $radius;

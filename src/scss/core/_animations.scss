@@ -3,23 +3,23 @@
 
 // Adding transitions
 section#hero > * {
-  transition: all $dur-l $snap__eff;
+  transition: all $duration_lg $snap_timing-function;
 }
 section#features > * {
-  transition: all $dur-l $snap__eff;
+  transition: all $duration_lg $snap_timing-function;
 }
 section#extensions .browser,
 section#extensions .description {
-  transition: all $dur-l $cubic__eff;
+  transition: all $duration_lg $cubic_timing-function;
 }
 section#faq > * {
-  transition: all $dur-l $snap__eff;
+  transition: all $duration_lg $snap_timing-function;
 }
 section#sign-up {
-  transition: all $dur-l $snap__eff;
+  transition: all $duration_lg $snap_timing-function;
 }
 section#footer {
-  transition: all $dur-l $snap__eff;
+  transition: all $duration_lg $snap_timing-function;
 }
 
 // Animating on class 'hidden'

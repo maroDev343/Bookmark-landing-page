@@ -3,13 +3,13 @@
 // Features
 
 #features {
-  @include flex-col(center, center);
+  @include flex(column, center);
   text-align: center;
 
   // desc
   .description {
     width: 50%;
-    @include media($mobile-br-1) {
+    @include media($mobile__break) {
       width: 75%;
     }
     h2 {
@@ -17,22 +17,22 @@
     }
     p {
       color: $gray;
-      margin-top: $med__spacing;
+      margin-top: $spacing_md;
     }
   }
   // sliders
   .sliders {
-    margin: $lrg__spacing 0;
-    @include flex-row(space-between, center);
+    margin: $spacing_lg 0;
+    @include flex(row);
     width: 750px;
-    @include media($desktop-br-fix) {
+    @include media($desktop__fix-break) {
       width: 80%;
       p {
         font-size: 0.825rem;
       }
     }
-    @include media($mobile-br-1) {
-      @include flex-col(center, center);
+    @include media($mobile__break) {
+      @include flex(column, center);
       width: 65%;
       p {
         font-size: initial;
@@ -44,7 +44,7 @@
       flex: 1;
       color: $gray;
       cursor: pointer;
-      padding: $med__spacing $sml__spacing;
+      padding: $spacing_md $spacing_sm;
       border-bottom: 1px solid $gray;
       position: relative;
       .border {
@@ -55,7 +55,7 @@
         bottom: -0.05rem;
         left: 0;
         transform: scaleX(0);
-        transition: all $dur-l $jiggle__eff;
+        transition: all $duration_lg $jiggle_timing-function;
       }
       &:hover {
         color: $soft__red;
@@ -79,23 +79,23 @@
     .slide {
       max-width: $fixed__width;
       margin: 0 auto;
-      padding: 0 $sml__spacing;
-      @include flex-row(space-between, center);
-      @include media($mobile-br-1) {
-        @include flex-col(center, center);
+      padding: 0 $spacing-sm;
+      @include flex(row);
+      @include media($mobile__break) {
+        @include flex(column, center);
       }
       img {
         width: 550px;
-        @include media($mobile-br-1) {
-          width: $mobile-br-1 + px;
+        @include media($mobile__break) {
+          width: $mobile__break-1 + px;
         }
-        @include media($mobile-br-1) {
-          width: $mobile-br-2 + px;
+        @include media($mobile__break-1) {
+          width: $mobile__break-2 + px;
         }
-        @include media($mobile-br-2) {
-          width: $mobile-br-3 + px;
+        @include media($mobile__break-2) {
+          width: $mobile__break-3 + px;
         }
-        @include media($desktop-br-4) {
+        @include media($desktop__break-4) {
           width: 450px;
         }
       }
@@ -109,20 +109,20 @@
         height: 20rem;
         border-radius: 0 20rem 20rem 0;
         background: $soft__blue;
-        @include media($mobile-br-1) {
+        @include media($mobile__break) {
           bottom: 40%;
           width: 80%;
         }
-        @include media($mobile-br-2) {
+        @include media($mobile__break-2) {
           bottom: 55%;
           height: 15rem;
         }
       }
       .content {
-        margin-left: $sml__spacing;
+        margin-left: $spacing-sm;
         text-align: left;
-        @include media($mobile-br-1) {
-          margin-top: $lrg__spacing * 1.5;
+        @include media($mobile__break) {
+          margin-top: $spacing-lg * 1.5;
           text-align: center;
         }
         h2 {
@@ -130,11 +130,11 @@
         }
         p {
           color: $gray;
-          margin: $med__spacing 0;
+          margin: $spacing_md 0;
           max-width: 27rem;
         }
         button {
-          @include btn-reset;
+          @include btn_reset;
           width: 7rem;
           height: 2.75rem;
           border-radius: $radius;

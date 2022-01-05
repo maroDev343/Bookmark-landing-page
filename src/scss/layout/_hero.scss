@@ -3,11 +3,10 @@
 // Hero
 
 #hero {
-  @include flex-row(space-between, center);
+  @include flex();
   padding: 15rem var(--page-padding);
-  @include media($mobile-br-1) {
-    @include flex-col(space-between, center);
-    flex-direction: column-reverse;
+  @include media($mobile__break) {
+    @include flex(column-reverse);
   }
   .content {
     width: 70%;
@@ -18,18 +17,18 @@
     p {
       color: $gray;
       max-width: 32.5rem;
-      margin: $med__spacing 0;
+      margin: $spacing_md 0;
     }
     .buttons__container {
-      @include media($desktop-br-3) {
-        @include flex-col(space-between, center);
+      @include media($desktop__break-3) {
+        @include flex(column);
       }
       & > * {
-        @include btn-reset;
+        @include btn_reset;
         width: 10rem;
         height: 3rem;
         border-radius: $radius;
-        @include media($desktop-br-3) {
+        @include media($desktop__break-3) {
           width: 100%;
         }
         &:first-child {
@@ -43,14 +42,14 @@
           }
         }
         &:last-child {
-          margin-left: $sml__spacing;
+          margin-left: $spacing_sm;
           color: $gray;
           background: $white;
           box-shadow: 0 0.375rem 1.75rem -0.75rem $gray;
           border: 2px solid transparent;
-          @include media($desktop-br-3) {
+          @include media($desktop__break-3) {
             margin-left: 0;
-            margin-top: $sml__spacing;
+            margin-top: $spacing-sm;
           }
           &:hover {
             color: $dark__blue;
@@ -64,7 +63,7 @@
   .illustration {
     position: relative;
     width: 50%;
-    @include media($mobile-br-1) {
+    @include media($mobile__break) {
       width: 100%;
     }
     .shape {

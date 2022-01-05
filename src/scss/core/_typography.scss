@@ -14,7 +14,7 @@ h1 {
   font-size: 3rem;
   font-weight: bold;
   line-height: 3rem;
-  @include media($desktop-br-2) {
+  @include media($desktop__break-2) {
     font-size: 2.75rem;
   }
 }
@@ -34,7 +34,7 @@ li {
   font-size: 0.775rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
-  @include media($desktop-br-2) {
+  @include media($desktop__break-2) {
     font-size: 0.725rem;
   }
 }
@@ -42,7 +42,7 @@ button {
   font-size: 0.85rem;
   font-weight: bold;
   letter-spacing: 0.075rem;
-  @include media($desktop-br-4) {
+  @include media($desktop__break-4) {
     font-size: 0.815rem;
   }
 }
