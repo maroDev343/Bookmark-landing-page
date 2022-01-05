@@ -16,7 +16,6 @@ $radius: 0.25rem;
 $lrg__radius: 0.75rem;
 $sml__spacing: 0.875rem;
 $med__spacing: 1.75rem;
-$lrg__spacing: 3.75rem;
 $fixed__width: 1200px;
 $section__break: 10rem;
 
@@ -45,4 +44,5 @@ $mobile-br-fix: 396;
 :root {
   // # Others
   --page-padding: 15rem;
+  --lrg-spacing: 3.75rem;
 }

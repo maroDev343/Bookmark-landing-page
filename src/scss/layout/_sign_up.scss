@@ -7,7 +7,7 @@
   text-align: center;
   background: $soft__blue;
   color: $white;
-  padding: $lrg__spacing 0;
+  padding: var(--lrg-spacing) 0;
   & > small {
     letter-spacing: 0.425rem;
   }

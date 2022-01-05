@@ -30,10 +30,12 @@ const animationIn = () => {
     content.style.transform = 'translateX(0%)';
     content.style.opacity = 1;
     //! Glitched on smaller screen sizes (overflowing of x axis of html after translating on x axis)
-    document.documentElement.style.width = '99%';
     setTimeout(() => {
-      document.documentElement.style.width = '100%';
-    }, 250);
+      document.documentElement.style.width = '99%';
+      setTimeout(() => {
+        document.documentElement.style.width = '100%';
+      }, 250);
+    }, 1000);
     //!
   }, 250);
 };

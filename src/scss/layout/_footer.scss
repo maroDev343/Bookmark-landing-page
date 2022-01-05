@@ -18,7 +18,7 @@
       @include flex-col(space-between, center);
     }
     .footer__logo {
-      margin-right: $lrg__spacing;
+      margin-right: var(--lrg-spacing);
       @include media($mobile-br-1) {
         margin-right: 0;
         margin-bottom: $med__spacing;

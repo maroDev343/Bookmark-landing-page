@@ -4,9 +4,9 @@
 
 #faq {
   @include flex-col(center, center);
-  margin-top: $section__break;
   text-align: center;
   padding: 0 1rem;
+  padding-top: $section__break;
   .description {
     max-width: 55%;
     padding-bottom: $sml__spacing;

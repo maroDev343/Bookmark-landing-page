@@ -20,4 +20,7 @@
   @include media($mobile-br-3) {
     --page-padding: 1rem;
   }
+  @include media($mobile-br-1) {
+    --lrg-spacing: 2.5rem;
+  }
 }

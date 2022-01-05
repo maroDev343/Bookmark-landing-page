@@ -5,7 +5,7 @@
 #extensions {
   text-align: center;
   @include flex-col(center, center);
-  margin-top: $section__break;
+  padding-top: $section__break;
   .description {
     h2 {
       color: $dark__blue;
@@ -17,7 +17,7 @@
     }
   }
   .browsers {
-    margin-top: $lrg__spacing;
+    margin-top: var(--lrg-spacing);
     padding: 0 $sml__spacing;
     @include flex-row(space-between, center);
     max-width: 1000px;
@@ -26,7 +26,7 @@
       @include flex-col(space-between, center);
       max-width: 400px;
       height: 1200px;
-      margin: $lrg__spacing auto;
+      margin: var(--lrg-spacing) auto;
     }
     .browser {
       flex-basis: 31%;
@@ -56,7 +56,7 @@
       }
       .break {
         width: 100%;
-        margin-top: $lrg__spacing;
+        margin-top: var(--lrg-spacing);
         margin-bottom: $sml__spacing * 1.25;
       }
       .install {

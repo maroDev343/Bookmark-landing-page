@@ -28,6 +28,7 @@ section#hero {
     opacity: 1;
   }
   .illustration {
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -37,6 +38,7 @@ section#hero.hidden {
     opacity: 0;
   }
   .illustration {
+    transform: translateX(100px);
     opacity: 0;
   }
 }

@@ -4,7 +4,8 @@
 
 #hero {
   @include flex-row(space-between, center);
-  padding: 15rem var(--page-padding);
+  padding: 0 var(--page-padding);
+  padding-top: $section__break;
   @include media($mobile-br-1) {
     @include flex-col(space-between, center);
     flex-direction: column-reverse;
