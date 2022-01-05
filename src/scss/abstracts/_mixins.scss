@@ -1,40 +1,54 @@
 // Mixins
 @use './variables' as *;
 
-// flex
-@mixin flex($dir: row, $just: space-between, $align: center) {
+@mixin flex-row($just: initial, $align: initial, $gap: initial) {
   display: flex;
-  flex-direction: $dir;
+  flex-direction: row;
   justify-content: $just;
   align-items: $align;
+  gap: $gap;
 }
-// gap
-@mixin gap($gap) {
-  gap: $gap + rem;
+@mixin flex-col($just: initial, $align: initial, $gap: initial) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $just;
+  align-items: $align;
+  gap: $gap;
 }
-// button reset
-@mixin btn_reset {
+// Include on inputs:not([type="button"],[type="submit"]) elements
+@mixin input-reset {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+// Include on input[type="button"], input[type="submit"], button elements
+@mixin btn-reset {
+  padding: 0;
+  border: none;
   outline: none;
   cursor: pointer;
+  // font: inherit;
 }
-// media query
+@mixin list-reset {
+  padding: 0;
+  list-style: none;
+}
+@mixin pseudo-reset {
+  content: '';
+  position: absolute;
+}
+// Media query
 @mixin media($max__width) {
-  @media (max-width: $max__width + px) {
+  @media (max-width: #{$max__width}px) {
     @content;
   }
 }
-// page padding
-@mixin custom__padding() {
-  @include media($desktop__break-1) {
-    --page-padding: 10rem;
-  }
-  @include media($desktop__break-2) {
-    --page-padding: 5rem;
-  }
-  @include media($desktop__break-3) {
-    --page-padding: 2.5rem;
-  }
-  @include media($mobile__break-2) {
-    --page-padding: 0.5rem;
-  }
-}
+/*
+* Default breakpoints
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV.
+*/

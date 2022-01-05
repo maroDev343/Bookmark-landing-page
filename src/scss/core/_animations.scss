@@ -1,6 +1,7 @@
 // @use '../abstracts' as *;
 // // Animations
 
+<<<<<<< HEAD
 // // Adding transitions
 // section#hero > * {
 //   transition: all $duration_lg $snap_timing-function;
@@ -21,6 +22,28 @@
 // section#footer {
 //   transition: all $duration_lg $snap_timing-function;
 // }
+=======
+// Adding transitions
+section#hero > * {
+  transition: all $dur-l $snap__eff;
+}
+section#features > * {
+  transition: all $dur-l $snap__eff;
+}
+section#extensions .browser,
+section#extensions .description {
+  transition: all $dur-l $cubic__eff;
+}
+section#faq > * {
+  transition: all $dur-l $snap__eff;
+}
+section#sign-up {
+  transition: all $dur-l $snap__eff;
+}
+section#footer {
+  transition: all $dur-l $snap__eff;
+}
+>>>>>>> parent of 8ae6f63 (reverted)
 
 // // Animating on class 'hidden'
 // section#hero {
