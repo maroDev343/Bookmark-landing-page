@@ -13,32 +13,33 @@ $font__family: 'Rubik', sans-serif; // 400, 500
 
 // # Others
 $radius: 0.25rem;
-$radius_lg: 0.75rem;
-$spacing_lg: 3.75rem;
-$spacing_md: 1.75rem;
-$spacing_sm: 0.875rem;
+$lrg__radius: 0.75rem;
+$sml__spacing: 0.875rem;
+$med__spacing: 1.75rem;
+$lrg__spacing: 3.75rem;
 $fixed__width: 1200px;
-$section_break: 10rem;
+$section__break: 10rem;
 
 // # Transitions
-$duration: 0.255s;
-$duration_lg: 0.875s;
-$transition: all $duration;
-$snap_timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-$jiggle_timing-function: cubic-bezier(0.78, -0.4, 0.01, 1.67);
-$cubic_timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+$dur-s: 0.255s;
+$dur-l: 0.875s;
+$delay: 0.1s;
+$snap__eff: cubic-bezier(0.86, 0, 0.07, 1);
+$jiggle__eff: cubic-bezier(0.78, -0.4, 0.01, 1.67);
+$cubic__eff: cubic-bezier(0.65, 0.05, 0.36, 1);
+$tr: $dur-s;
 
 // # Breakpoints
-$desktop__break-1: 1600;
-$desktop__break-2: 1215;
-$desktop__break-3: 1000;
-$desktop__fix-break: 861;
-$desktop__break-4: 790;
-$mobile__break: 700;
-$mobile__break-1: 545;
-$mobile__break-2: 420;
-$mobile__break-3: 320;
-$fix-faq: 396;
+$desktop-br-1: 1600;
+$desktop-br-2: 1215;
+$desktop-br-3: 1000;
+$desktop-br-fix: 861;
+$desktop-br-4: 790;
+$mobile-br-1: 700;
+$mobile-br-2: 545;
+$mobile-br-3: 420;
+$mobile-br-4: 320;
+$mobile-br-fix: 396;
 
 // # Custom Props
 :root {

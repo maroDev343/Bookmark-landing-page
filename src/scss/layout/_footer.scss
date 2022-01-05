@@ -3,40 +3,41 @@
 // Footer
 
 #footer {
-  @include flex;
+  @include flex-row(space-between, center);
   background: $dark__blue;
   width: 100%;
   padding: 2.25rem var(--page-padding);
 
-  @include media($mobile__break) {
-    @include flex(column);
+  @include media($mobile-br-1) {
+    @include flex-col(space-between, center);
   }
   .left__side {
-    @include flex;
+    @include flex-row(space-between, center);
 
-    @include media($mobile__break) {
-      @include flex(column);
+    @include media($mobile-br-1) {
+      @include flex-col(space-between, center);
     }
     .footer__logo {
-      margin-right: $spacing_lg;
-      @include media($mobile__break) {
+      margin-right: $lrg__spacing;
+      @include media($mobile-br-1) {
         margin-right: 0;
-        margin-bottom: $spacing_md;
+        margin-bottom: $med__spacing;
       }
     }
     .links {
-      @include flex;
-      @include media($mobile__break) {
-        @include flex(column);
+      @include list-reset;
+      @include flex-row(space-between, center);
+      @include media($mobile-br-1) {
+        @include flex-col(space-between, center);
       }
       li {
         cursor: pointer;
         color: $white;
         text-transform: uppercase;
-        margin-right: $spacing_md;
-        @include media($mobile__break) {
+        margin-right: $med__spacing;
+        @include media($mobile-br-1) {
           margin-right: 0;
-          margin-bottom: $spacing_md;
+          margin-bottom: $med__spacing;
         }
         &:hover {
           color: $soft__red;
@@ -45,14 +46,14 @@
     }
   }
   .social {
-    @include flex;
+    @include flex-row(space-between, center);
     i {
       color: $white;
-      margin-right: $spacing_md;
+      margin-right: $med__spacing;
       cursor: pointer;
-      @include media($mobile__break) {
-        margin-right: $spacing_sm;
-        margin-left: $spacing_sm;
+      @include media($mobile-br-1) {
+        margin-right: $sml__spacing;
+        margin-left: $sml__spacing;
       }
       &:hover {
         color: $soft__red;

@@ -1,9 +1,23 @@
 // Link all the layout/files
-// @use './layout';
+@use './abstracts' as *;
 @use './layout/extension';
 @use './layout/faq';
 @use './layout/features';
 @use './layout/footer';
 @use './layout/hero';
-@use './layout/navigations';
+@use './layout/navigation';
 @use './layout/sign_up';
+:root {
+  @include media($desktop-br-1) {
+    --page-padding: 10rem;
+  }
+  @include media($desktop-br-2) {
+    --page-padding: 5rem;
+  }
+  @include media($desktop-br-3) {
+    --page-padding: 2.5rem;
+  }
+  @include media($mobile-br-2) {
+    --page-padding: 0.5rem;
+  }
+}

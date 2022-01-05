@@ -15,7 +15,7 @@
     width: 100%;
     height: 8rem;
     background: $white;
-    @include flex();
+    @include flex-row(space-between, center);
 
     .heading {
       .nav__logo {
@@ -24,13 +24,13 @@
       }
     }
     .links {
-      @include flex();
-      @include gap(4);
-      @include media($desktop__break-2) {
-        @include gap(2.5);
+      @include list-reset;
+      @include flex-row(space-between, center, 4rem);
+      @include media($desktop-br-2) {
+        @include flex-row(space-between, center, 2.5rem);
       }
-      @include media($desktop__break-4) {
-        @include gap(1.75);
+      @include media($desktop-br-4) {
+        @include flex-row(space-between, center, 1.75rem);
       }
       & > * {
         text-transform: uppercase;
@@ -38,13 +38,13 @@
       li {
         color: $gray;
         cursor: pointer;
-        transition: all $duration;
+        transition: all $dur-s;
         &:hover {
           color: $soft__red;
         }
       }
       button {
-        @include btn_reset();
+        @include btn-reset();
         background: $soft__red;
         color: $white;
         border-radius: $radius;
@@ -52,7 +52,7 @@
         height: 2.5rem;
         border: 2px solid transparent;
 
-        @include media($desktop__break-4) {
+        @include media($desktop-br-4) {
           width: 6rem;
           height: 2.25rem;
         }
@@ -70,12 +70,12 @@
     width: 100%;
     height: 8rem;
     background: $white;
-    @include flex();
+    @include flex-row(space-between, center);
     display: none;
 
     .heading {
       width: 100%;
-      @include flex();
+      @include flex-row(space-between, center);
       z-index: 99;
       position: relative;
 
@@ -97,6 +97,7 @@
       }
     }
     .links {
+      @include list-reset;
       background: $dark__blue;
       width: 100vw;
       height: 100vh;
@@ -104,8 +105,7 @@
       inset: 0;
       padding: 7.5rem 4rem; // adjust as you declare the size of the media query
       opacity: 0.925;
-      @include flex(column, initial);
-      @include gap(2);
+      @include flex-col(initial, initial, 2rem);
       transform: scaleY(0);
       transform-origin: top;
 
@@ -117,7 +117,7 @@
       li {
         color: $white;
         cursor: pointer;
-        transition: all $duration;
+        transition: all $dur-s;
         padding-top: 1.75rem;
         border : {
           top: 1px solid $gray;
@@ -131,7 +131,7 @@
         }
       }
       button {
-        @include btn_reset();
+        @include btn-reset();
         background: $dark__blue;
         color: $white;
         border-radius: $radius;

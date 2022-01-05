@@ -3,39 +3,39 @@
 // Extensions
 
 #extensions {
-  @include flex(column, center);
-  margin-top: $section_break;
   text-align: center;
+  @include flex-col(center, center);
+  margin-top: $section__break;
   .description {
     h2 {
       color: $dark__blue;
     }
     p {
       color: $gray;
-      margin: $spacing_md auto;
+      margin: $med__spacing auto;
       max-width: 65%;
     }
   }
   .browsers {
-    margin-top: $spacing_lg;
-    padding: 0 $spacing_sm;
-    @include flex();
+    margin-top: $lrg__spacing;
+    padding: 0 $sml__spacing;
+    @include flex-row(space-between, center);
     max-width: 1000px;
     height: 450px;
-    @include media($mobile__break) {
-      @include flex(column);
+    @include media($mobile-br-1) {
+      @include flex-col(space-between, center);
       max-width: 400px;
       height: 1200px;
-      margin: $spacing_lg auto;
+      margin: $lrg__spacing auto;
     }
     .browser {
       flex-basis: 31%;
       height: 90%;
-      @include media($mobile__break) {
+      @include media($mobile-br-1) {
         flex-basis: 90%;
-        margin-top: $spacing_sm;
+        margin-top: $sml__spacing;
       }
-      border-radius: $radius_lg;
+      border-radius: $lrg__radius;
       background: $white;
       box-shadow: 0 0.325rem 0.5rem -0.25rem $gray;
       &:first-child {
@@ -45,35 +45,35 @@
         transform: translateY(50px);
       }
       &__image {
-        margin: $spacing_md;
+        margin: $med__spacing auto;
       }
       &__name {
         color: $dark__blue;
-        margin-bottom: $spacing_sm / 2.5;
+        margin-bottom: $sml__spacing / 2.5;
       }
       &__required-version {
         color: $gray;
       }
       .break {
         width: 100%;
-        margin-top: $spacing_lg;
-        margin-bottom: $spacing_sm * 1.25;
+        margin-top: $lrg__spacing;
+        margin-bottom: $sml__spacing * 1.25;
       }
       .install {
-        @include btn_reset;
+        @include btn-reset;
         width: 85%;
         height: 3rem;
         border-radius: $radius;
-        color: $white;
         background: $soft__blue;
         border: 2px solid transparent;
-        @include media($mobile__break) {
-          margin-bottom: $spacing_md;
-        }
+        color: $white;
         &:hover {
           background: $white;
           color: $soft__blue;
           border-color: $soft__blue;
+        }
+        @include media($mobile-br-1) {
+          margin-bottom: $med__spacing;
         }
       }
     }
