@@ -42,7 +42,7 @@
         padding: 0.5rem;
         font-size: 0.925rem;
         &::placeholder {
-          color: black;
+          // color: black;
           font-weight: bold;
           font-size: 0.8rem;
         }
@@ -78,7 +78,6 @@
       border-radius: $radius;
       background: $soft__red;
       color: $white;
-      padding: 0 0.75rem;
       @include media($mobile-br-1) {
         width: 100%;
         margin-left: 0;

@@ -17,7 +17,7 @@
   @include media($desktop-br-3) {
     --page-padding: 2.5rem;
   }
-  @include media($mobile-br-2) {
+  @include media($mobile-br-3) {
     --page-padding: 0.5rem;
   }
 }

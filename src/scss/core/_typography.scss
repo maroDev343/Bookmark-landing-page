@@ -12,7 +12,7 @@ body {
 // # Headings | paragraphs | etc..
 h1 {
   font-size: 3rem;
-  font-weight: 501;
+  font-weight: bold;
   line-height: 3rem;
   @include media($desktop-br-2) {
     font-size: 2.75rem;
@@ -20,11 +20,11 @@ h1 {
 }
 h2 {
   font-size: 2rem;
-  font-weight: 501;
+  font-weight: bold;
 }
 h3 {
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: normal;
 }
 p {
   letter-spacing: 0.0525rem;
@@ -32,7 +32,7 @@ p {
 }
 li {
   font-size: 0.775rem;
-  font-weight: 500;
+  font-weight: bold;
   letter-spacing: 0.1rem;
   @include media($desktop-br-2) {
     font-size: 0.725rem;
@@ -40,7 +40,7 @@ li {
 }
 button {
   font-size: 0.85rem;
-  font-weight: 550;
+  font-weight: bold;
   letter-spacing: 0.075rem;
   @include media($desktop-br-4) {
     font-size: 0.815rem;
