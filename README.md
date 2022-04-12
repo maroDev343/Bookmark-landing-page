@@ -1,10 +1,17 @@
 # Bookmark-landing-page
 
-- Created with Html Sass Javascript using *vite*🔥
+- Fully responsive & animated
 
-- Fully responsive and animated
+- Tech used with *vite*🔥:
+  Html
+  Sass
+  Javascript 
 
-- Additional stuff (hovers, animations, effects, etc...)
+# Features
+
+- Dynamic navbar 
+
+- Slider
 
 # Live
 
@@ -12,6 +19,4 @@
 
 # Credit
 
-- Inspired by Frontend mentor
-
-- Website: https://www.frontendmentor.io
+- Inspired by frontendmentor.io
