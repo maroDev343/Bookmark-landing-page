@@ -7,16 +7,10 @@
   Sass
   Javascript 
 
-# Features
-
-- Dynamic navbar 
-
-- Slider
-
 # Live
 
 - https://marodevv-bookmark-landing-page.pages.dev/
 
 # Credit
 
-- Inspired by frontendmentor.io
+- Inspired by Frontend Mentor
