@@ -10,7 +10,7 @@
 
 ## Live
 
-> https://marodevv-bookmark-landing-page.vercel.app
+> https://marwanmodev-bookmark-landing-page.vercel.app
 
 ## Credit
 
